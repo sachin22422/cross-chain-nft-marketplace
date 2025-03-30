@@ -1,0 +1,23 @@
+import { AggLayerSDK } from "@polygon/agg-layer-sdk";
+import { ethers } from "ethers";
+
+const AGG_LAYER_API_KEY = "YOUR_AGG_LAYER_API_KEY"; // Replace with actual AggLayer API Key
+
+export async function transferNFT(fromChain, toChain, tokenId, sender, receiver) {
+    try {
+        const sdk = new AggLayerSDK({ apiKey: AGG_LAYER_API_KEY });
+
+        const tx = await sdk.transferNFT({
+            fromChain,
+            toChain,
+            tokenId,
+            sender,
+            receiver
+        });
+
+        console.log("✅ Cross-chain NFT transfer initiated:", tx);
+        return tx;
+    } catch (error) {
+        console.error("❌ Error in cross-chain NFT transfer:", error);
+    }
+}
