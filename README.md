@@ -11,7 +11,7 @@ A futuristic NFT marketplace where users can transfer NFTs across chains in one 
 
 ## 🖥 Live Demo
 
-👉 [Live on Vercel](https://your-app.vercel.app)
+👉 [Live on Vercel](https://cross-chain-nft-marketplace.vercel.app)
 
 ## 📸 Screenshots
 
